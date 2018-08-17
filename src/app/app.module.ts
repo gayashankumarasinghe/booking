@@ -22,16 +22,21 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CoverComponent } from './components/cover/cover.component';
+
 // Service Imports
 import { ClientService } from './services/client.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 
 const appRoutes: Routes = [
-    {path:'', component:DashboardComponent, canActivate:[AuthGuard]},
+    {path:'dashboard', component:DashboardComponent, canActivate:[AuthGuard]},
+    //{path:'', component:CoverComponent},
     {path:'register', component:RegisterComponent},
     {path:'login', component:LoginComponent},
-    {path:'addclient',component:AddclientComponent, canActivate:[AuthGuard]}
+    {path:'addclient',component:AddclientComponent, canActivate:[AuthGuard]},
+    {path:'client-details',component:ClientDetailsComponent,canActivate:[AuthGuard]},
+    {path:'',component:CoverComponent},
 ];
 
 export const firebaseConfig = {
@@ -57,7 +62,8 @@ export const firebaseConfig = {
     LoginComponent,
     RegisterComponent,
     SettingsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CoverComponent
   ],
   imports: [
     BrowserModule,
