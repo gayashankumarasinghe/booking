@@ -23,6 +23,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CoverComponent } from './components/cover/cover.component';
+import { BookserviceComponent } from './components/bookservice/bookservice.component';
+import { OilchangeComponent } from './components/oilchange/oilchange.component';
+import { WithwashingComponent } from './components/withwashing/withwashing.component';
+
 
 // Service Imports
 import { ClientService } from './services/client.service';
@@ -37,6 +41,9 @@ const appRoutes: Routes = [
     {path:'addclient',component:AddclientComponent, canActivate:[AuthGuard]},
     {path:'client-details',component:ClientDetailsComponent,canActivate:[AuthGuard]},
     {path:'',component:CoverComponent},
+    {path:'bookservice', component:BookserviceComponent},
+    {path:'oilchange', component:OilchangeComponent},
+    {path:'withwashing', component:WithwashingComponent}
 ];
 
 export const firebaseConfig = {
@@ -63,7 +70,10 @@ export const firebaseConfig = {
     RegisterComponent,
     SettingsComponent,
     PageNotFoundComponent,
-    CoverComponent
+    CoverComponent,
+    BookserviceComponent,
+    OilchangeComponent,
+    WithwashingComponent
   ],
   imports: [
     BrowserModule,
