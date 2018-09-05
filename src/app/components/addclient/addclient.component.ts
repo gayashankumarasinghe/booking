@@ -17,7 +17,8 @@ export class AddclientComponent implements OnInit {
     email:'',
     phone:'',
     vehicleNo:'',
-    millage:0
+    millage:0,
+  
   }
   //disableBalanceOnAdd:boolean = false;
 
@@ -38,7 +39,7 @@ export class AddclientComponent implements OnInit {
     // Add new client
     this.clientService.newClient(value);
     this.flashMessagesService.show('New client added', {cssClass:'alert-success', timeout: 4000});
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
   }
   }
   

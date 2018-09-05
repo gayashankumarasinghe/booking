@@ -115,6 +115,18 @@
 
         >    
       </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <input 
+          type="boolean"
+          class="form-control"
+          [(ngModel)]="client.role"
+          name="role"
+          #clientRole="ngModel"
+          required
+
+        >    
+      </div>
 
       <input type="submit" class="btn btn-primary btn-block" value="Submit">
     </form>
